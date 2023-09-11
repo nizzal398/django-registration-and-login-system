@@ -1,0 +1,25 @@
+services:
+  web:
+    image: django_app:stg
+    command: 
+    ports:
+      - 8000:8000
+    environment:
+      - MYSQL_DB_NAME=${MYSQL_DB}
+      - MYSQL_DB_USER=${MYSQL_USER}
+      - MYSQL_DB_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DB_HOST=${MYSQL_HOST}
+      - MYSQL_DB_PORT=${MYSQL_PORT}
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    volumes:
+      - db:/var/lib/mysql/data
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DB}
+
+volumes:
+  db:
