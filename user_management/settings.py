@@ -86,11 +86,14 @@ WSGI_APPLICATION = 'user_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ['MYSQL_DB_NAME'],
+        'USER': os.environ['MYSQL_DB_USER'],
+        'PASSWORD': os.environ['MYSQL_DB_PASSWORD'],
+        'HOST': os.environ['MYSQL_DB_HOST'],
+        'PORT': os.environ['MYSQL_DB_PORT'],
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
