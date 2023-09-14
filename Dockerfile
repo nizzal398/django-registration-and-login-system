@@ -14,4 +14,8 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
+RUN chown -R www-data:www-data /app
+
+USER www-data
+
 CMD ["uwsgi", "--ini", "uwsgi.ini"]
