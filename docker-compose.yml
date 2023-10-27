@@ -1,9 +1,8 @@
 services:
   web:
     image: django_app:stg
-    command: 
     ports:
-      - 8000:8000
+      - 80:8000
     environment:
       - MYSQL_DB_NAME=${MYSQL_DB}
       - MYSQL_DB_USER=${MYSQL_USER}
