@@ -10,6 +10,7 @@ services:
       - MYSQL_DB_HOST=${MYSQL_HOST}
       - MYSQL_DB_PORT=${MYSQL_PORT}
       - HOST_IP=${HOST_IP}
+      - ALB_ENDPOINT=${ALB_ENDPOINT}
       - DEBUG=False
         #    depends_on:
         #      - db

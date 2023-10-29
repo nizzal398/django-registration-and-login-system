@@ -8,6 +8,7 @@ export MYSQL_PORT="3306"
 export MYSQL_USER="admin"
 export MYSQL_PASSWORD="$(aws ssm get-parameter --name "/rds/password" --with-decryption --query "Parameter.Value" --output text)"
 export HOST_IP="$(curl http://169.254.169.254/latest/meta-data/local-ipv4)"
+export ALB_ENDPOINT="$(aws ssm get-parameter --name "/app/lb" --with-decryption --query "Parameter.Value" --output text)"
 
 docker compose down
 
