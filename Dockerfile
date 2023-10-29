@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN apt build-essential python3-dev -y
+RUN apt install build-essential python3-dev -y
 
 WORKDIR /app
 
