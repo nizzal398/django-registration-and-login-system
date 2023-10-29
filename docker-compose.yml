@@ -9,7 +9,7 @@ services:
       - MYSQL_DB_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DB_HOST=${MYSQL_HOST}
       - MYSQL_DB_PORT=${MYSQL_PORT}
-      - ALB_DOMAIN=${ALB_DOMAIN}
+      - HOST_IP=${HOST_IP}
       - DEBUG=False
         #    depends_on:
         #      - db
