@@ -14,7 +14,9 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN chown -R www-data:www-data /app
+RUN mkdir -p /var/log/uwsgi
+
+RUN chown -R www-data:www-data /app /var/log/uwsgi
 
 USER www-data
 
