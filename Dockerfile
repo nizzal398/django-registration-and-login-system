@@ -20,4 +20,4 @@ RUN chown -R www-data:www-data /app /var/log/uwsgi
 
 USER www-data
 
-CMD ["uwsgi", "--ini", "uwsgi.ini"]
+CMD ["sh", "docker-start.sh"]
