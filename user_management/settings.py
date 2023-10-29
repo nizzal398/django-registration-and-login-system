@@ -20,7 +20,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.getenv('DEBUG', True))
 
-ALLOWED_HOSTS = [ os.getenv('ALB_DOMAIN'), '127.0.0.1', 'localhost' ]
+ALLOWED_HOSTS = [ os.getenv('HOST_IP'), '127.0.0.1', 'localhost' ]
 
 
 # Application definition
